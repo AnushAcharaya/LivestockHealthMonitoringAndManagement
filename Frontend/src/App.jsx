@@ -1,18 +1,18 @@
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
+import AccountCreate from "./pages/CreateAccount";
+
 
 function App() {
-
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
-      <h1 className="bg-black text-white text-4xl p-6 rounded-xl">
-        Hello World
-      </h1>
-    </div>
+    <Router>
+      <Routes>
 
+        <Route path="/register" element={<AccountCreate />} />
 
+      </Routes>
+    </Router>
   )
 }
 
-export default App
+export default App;
